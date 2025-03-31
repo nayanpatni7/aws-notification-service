@@ -1,15 +1,18 @@
-# Step 0: Create folder & get insider
+# BASIC SETUP INFO
+
+
+## Step 1: Create folder & get insider
 mkdir notification-serrvice
 cd notification-service
 
-# Step 1: Initialize Serverless Framework
+
+## Step 2: Initialize Serverless Framework
 serverless create --template aws-nodejs-typescript --path .
 npm install
 
-# Step 2: Deploy the app
+
+## Step 3: Deploy the app
 serverless deploy
-
-
 ```sh
 ➜  notification-service git:(main) ✗ serverless deploy
 
@@ -25,15 +28,15 @@ functions:
 ```
 
 
-# Step 2: Deploy the app
+# Step 4: Deploy the app
 serverless deploy
 
 
 ```sh
+
 ➜  notification-service git:(main) ✗ serverless deploy
 
 Running "serverless" from node_modules
-
 Deploying notification-service to stage dev (us-east-1)
 
 ✔ Service deployed to stack notification-service-dev (310s)
@@ -44,12 +47,10 @@ functions:
   hello: notification-service-dev-hello (4.7 kB)
 
 1 deprecation found: run 'serverless doctor' for more details
-
 Monitor all your API routes with Serverless Console: run "serverless --console"
-
-
-
 ```
+
+
 
 # Check logs of specific function
 serverless logs -f hello --tail
