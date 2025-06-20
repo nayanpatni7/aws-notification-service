@@ -1,7 +1,7 @@
 import { handler } from "./handler";
 import { SQSEvent, Context, Callback, SQSRecord } from "aws-lambda";
 
-describe("helloHandler Lambda Function", () => {
+describe("sqsConsumerHandler Lambda Function", () => {
     const validPayload = {
         "TotalCount": 2,
         "TotalAmount": 2,

@@ -12,6 +12,7 @@ export const handler: SQSHandler = async (event: SQSEvent): Promise<void> => {
 
   try {
     const sqsMessage = JSON.parse(record.body);
+
     const headers = sqsMessage.headers;
     const messageBody = sqsMessage.body;
 

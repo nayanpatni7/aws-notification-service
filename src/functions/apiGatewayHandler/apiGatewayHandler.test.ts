@@ -1,4 +1,4 @@
-import { handler } from "./apiGatewayHandler";
+import { handler } from "./handler";
 import { APIGatewayProxyEvent } from "aws-lambda";
 
 jest.mock("@aws-sdk/client-sqs", () => {

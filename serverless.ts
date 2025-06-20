@@ -49,7 +49,7 @@ const serverlessConfiguration: AWS = {
   },
   functions: {
     apiGatewayHandler: {  // ✅ API Gateway → SQS
-      handler: "src/functions/apiGatewayHandler.handler",
+      handler: "src/functions/apiGatewayHandler/handler.handler",
       events: [
         {
           http: {
@@ -60,8 +60,8 @@ const serverlessConfiguration: AWS = {
         },
       ],
     },
-    hello: {  // ✅ SQS → Main processing Lambda
-      handler: "src/functions/hello/handler.handler",
+    sqsConsumer: {  // ✅ SQS → Main processing Lambda
+      handler: "src/functions/sqsConsumer/handler.handler",
       events: [
         {
           sqs: {

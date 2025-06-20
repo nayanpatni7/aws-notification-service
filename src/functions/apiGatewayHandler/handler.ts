@@ -1,6 +1,7 @@
 import { APIGatewayProxyEvent, APIGatewayProxyResult } from "aws-lambda";
 import { SQSClient, SendMessageCommand } from "@aws-sdk/client-sqs";
-import { badRequest, serverError, successResponse } from "../utils/response";
+import { badRequest, serverError, successResponse } from "../../utils/response";
+
 
 const sqs = new SQSClient({ region: "us-east-1" });
 const QUEUE_URL = process.env.WEBHOOK_QUEUE_URL!;
